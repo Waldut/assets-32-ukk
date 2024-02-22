@@ -14,7 +14,7 @@ function checkIsNotLogin()
 
 function urlTo($to)
 {
-	return 'http://localhost/ukk_perpustakaan/login'.$to;
+	return 'http://localhost/ukk_perpustakaan'.$to;
 }
 
 function redirectTo($icon, $pesan, $tujuan)

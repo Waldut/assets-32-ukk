@@ -26,7 +26,7 @@ class KoleksiController extends Controller
     ]) > 0) {
       redirectTo('success', 'Selamat, Buku berhasil di tambahkan ke koleksi', '/koleksi');
     } else {
-      redirectTo('error', 'Maaf, a gagal di tambahkan ke koleksi', '/perpustakaan');
+      redirectTo('error', 'Maaf, buku gagal di tambahkan ke koleksi', '/perpustakaan');
     }
   }
 

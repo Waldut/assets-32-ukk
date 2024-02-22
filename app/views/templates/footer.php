@@ -17,16 +17,16 @@
 <!-- ./wrapper -->
 
 <!-- sweetalert2 -->
-<script src="<?= urlTo('../../public/adminlte/plugins/sweetalert2/sweetalert2.min.js') ?>"></script>
+<script src="<?= urlTo('/public/adminlte/plugins/sweetalert2/sweetalert2.min.js') ?>"></script>
 <!-- jQuery -->
-<script src="<?= urlTo('../../public/adminlte/plugins/jquery/jquery.min.js') ?>"></script>
+<script src="<?= urlTo('/public/adminlte/plugins/jquery/jquery.min.js') ?>"></script>
 <!-- DataTables  & Plugins -->
-<script src="<?= urlTo('../../public/adminlte/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
-<script src="<?= urlTo('../../public/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
+<script src="<?= urlTo('/public/adminlte/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
+<script src="<?= urlTo('/public/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
 <!-- Bootstrap 4 -->
-<script src="<?= urlTo('../../public/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+<script src="<?= urlTo('/public/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 <!-- AdminLTE App -->
-<script src="<?= urlTo('../../public/adminlte/js/adminlte.js') ?>"></script>
+<script src="<?= urlTo('/public/adminlte/js/adminlte.js') ?>"></script>
 <?php if (isset($_COOKIE['alert'])): ?>
   <?php $data = unserialize($_COOKIE['alert']); ?>
   <script>

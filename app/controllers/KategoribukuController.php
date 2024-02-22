@@ -28,9 +28,9 @@ class KategoribukuController extends Controller
     if ($this->model('Kategoribuku')->create([
       'NamaKategori'  => $_POST['NamaKategori']
     ]) > 0) {
-      redirectTo('success', 'Selamat, Data Kategori Berhasil di Tambahkan', '/kategoribuku');
+      redirectTo('success', 'Data Kategori Berhasil Di Tambahkan', '/kategoribuku');
     } else {
-      redirectTo('danger', 'Maaf, Data Kategori gagal di Tambahkan', '/kategoribuku');
+      redirectTo('danger', 'Data Kategori gagal di Tambahkan', '/kategoribuku');
     }
   }
 
