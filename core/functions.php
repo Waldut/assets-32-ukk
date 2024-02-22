@@ -8,7 +8,7 @@ $url = new Url();
 function checkIsNotLogin()
 {
 	if (!isset($_SESSION['login'])) {
-		header("Location:http://localhost/ukk_perpustakaan/login");
+		header("Location:http://localhost/ukk_perpustakaan/");
 	}
 }
 
