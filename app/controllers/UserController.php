@@ -4,8 +4,7 @@ class UserController extends Controller
   public function __construct()
   {
     /**
-      * Batasi hak akses hanya untuk Administrator
-      * Selain Administrator akan langsung diarahkan kembali ke halaman home
+      * 
     */
     if ($_SESSION['role'] !== 'Administrator') {
       redirectTo('error', 'Mohon maaf, Anda tidak berhak mengakses halaman ini', '/');

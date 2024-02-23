@@ -38,6 +38,17 @@
     });
   </script>
 <?php endif ?>
+
+
+
+
+
+
+
+
+
+
+
 <script>
   $(function () {
     $("#example1").DataTable({

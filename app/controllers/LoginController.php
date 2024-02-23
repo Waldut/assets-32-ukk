@@ -58,7 +58,6 @@ class LoginController extends Controller
 	{
 		session_destroy();
 		session_unset();
-		redirectTo('success', 'Selamat, Anda berhasil logout!', '../login');
+		redirectTo('success', 'Selamat, Anda berhasil logout!', '/login');
 	}
 }
-?>

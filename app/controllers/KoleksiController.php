@@ -4,8 +4,7 @@ class KoleksiController extends Controller
   public function __construct()
   {
     /**
-      * Batasi hak akses hanya untuk peminjam
-      * Selain peminjam akan langsung diarahkan kembali ke halaman home
+ 
     */
     if ($_SESSION['role'] !== 'Peminjam') {
       redirectTo('error', 'Mohon maaf, Anda tidak berhak mengakses halaman ini', '/');
@@ -37,4 +36,3 @@ class KoleksiController extends Controller
 		}
 	}
 }
-?>

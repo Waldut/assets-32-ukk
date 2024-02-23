@@ -22,7 +22,7 @@
         </div>
         
         <div class="form-group">
-          <label for="TahunTerbit">TahunTerbit</label>
+          <label for="TahunTerbit">Tahun Terbit</label>
           <input type="number" id="TahunTerbit" name="TahunTerbit" class="form-control"
           value="<?= $data['TahunTerbit']; ?>" required>
         </div>
