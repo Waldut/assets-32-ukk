@@ -1,5 +1,5 @@
 <?php 
-
+use Dompdf\Dompdf;
 class BukuController extends Controller
 {
   public function __construct()
@@ -75,5 +75,34 @@ class BukuController extends Controller
     ]);
   }
 
- 
+  public function cetakbuku()
+  {
+    $data = $this->model('KBRelasi')->get();
+    $html 	= "<center>";
+		$html 	.= "<h1>SMKN 4 TANGERANG</h1>";
+		$html 	.= "<h2>PERPUSTAKAAN DIGITAL</h2>";
+		$html 	.= "<h3>DAFTAR BUKU</h3>";
+		$html 	.= "<hr>";
+    $html   .= "<table align='center' border='1' cellpadding='10' cellspacing='0'>";
+		$html   .= "<tr><th>#</th><th>Kategori</th><th>Judul Buku</th><th>Penulis</th><th>Penerbit</th><th>Tahun Terbit</th></tr>";
+    $no = 1;
+    foreach ($data as $buku) {
+      $html .= "<tr>";
+      $html .= "<td>".$no."</td>";
+      $html .= "<td>".$buku['NamaKategori']."</td>";
+      $html .= "<td>".$buku['Judul']."</td>";
+      $html .= "<td>".$buku['Penulis']."</td>";
+      $html .= "<td>".$buku['Penerbit']."</td>";
+      $html .= "<td>".$buku['TahunTerbit']."</td>";
+      $html .= "</tr>";
+      $no++;
+    }
+    $html   .= "</table>";
+    $html 	.= "</center>";
+    $dompdf = new Dompdf();
+		$dompdf->loadHtml($html);
+		$dompdf->setPaper('4A', 'potrait');
+		$dompdf->render();
+		$dompdf->stream('Data Buku', ['Attachment' => 0]);
+  }
 }
